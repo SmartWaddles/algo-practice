@@ -1,8 +1,8 @@
 # Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 
 def lst_toLinkedLst(lst):
     linked_lst = []
@@ -15,7 +15,7 @@ def lst_toLinkedLst(lst):
 
     return linked_lst[0]
 
-def listToInt(lst: List) -> int:
+def listToInt(lst: list) -> int:
     num_int = 0
     for idx, digit in enumerate(lst):
         num_int += int(digit)*(10**(len(lst)-(idx+1)))
@@ -121,7 +121,7 @@ class Solution:
         else: linked_lst = lst_toLinkedLst(lst)
         return linked_lst
 
-    def mergeKLists(self, lists: List[ListNode]) -> ListNode:
+    def mergeKLists(self, lists: list[ListNode]) -> ListNode:
         """
         Link to LeetCode: https://leetcode.com/problems/merge-k-sorted-lists/
         You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
@@ -241,4 +241,3 @@ class Solution:
         if len(lst) == 0: return None
         else: linked_lst = lst_toLinkedLst(lst)
         return linked_lst
-
